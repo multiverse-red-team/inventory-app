@@ -1,5 +1,5 @@
 # inventory-app
-An application to track inventory items.
+A full-stack application to track your inventory
 
 ## Getting Started
 
