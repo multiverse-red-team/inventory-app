@@ -17,15 +17,15 @@
     "morgan": "1.10.0",
     "nodemon": "^2.0.19",
     "parcel-bundler": "^1.12.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sequelize": "^6.21.4",
-    "sqlite3": "^5.0.11"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
+    "sequelize": "^6.23.2",
+    "sqlite3": "^5.1.1"
   },
   "devDependencies": {
     "@testing-library/react": "^12.0.0",
     "babel-jest": "^27.1.0",
-    "jest": "^27.1.0",
-    "react-test-renderer": "^17.0.2"
+    "jest": "^27.1.0"
   }
 }
