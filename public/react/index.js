@@ -11,14 +11,14 @@
 
 let inventory = [];
 
-let inputBox = document.querySelector(".inputBox");
+let inputProduct = document.querySelector(".inputProduct");
 let addButton = document.querySelector(".addButton");
 let list = document.querySelector(".list");
 
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
-  inventory.push(inputBox.value);
-  inputBox.value = '';
+  inventory.push(inputProduct.value);
+  inputProduct.value = '';
   updateInventoryList();
   console.log(inventory);
 });
