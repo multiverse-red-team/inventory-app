@@ -1,10 +1,47 @@
-  
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function testfunc() {
+window.addEventListener("load", () => {
+var demo = document.getElementById("tylerstestingstuffignoreit\testhtml.html");
+console.log(demo);
+}
+)}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
+
 
 
 <div class="main">
@@ -15,7 +52,7 @@
             <input type="text" placeholder="Description" class="inputDescription" required>
             <input type="text" placeholder="Category" class="inputCategory" required>
             <input type="number" placeholder="Price" class="inputPrice" required>
-            <input type="submit" class="addButton">
+            <input type="submit" class="addButton" onClick="testfunc()">
         </form>
 
         <h2>Current Inventory:</h2>
