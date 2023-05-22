@@ -10,10 +10,23 @@
 ///////////////////////////////////////////////////////////////////////
 
 let inventory = [];
-
-let inputProduct = document.querySelector(".inputProduct");
 let addButton = document.querySelector(".addButton");
 let list = document.querySelector(".list");
+
+
+let inputName = document.querySelector(".inputName");
+let inputDescription = document.querySelector(".inputDescription");
+let inputCategory = document.querySelector(".inputCategory");
+let inpuPrice= document.querySelector(".inputPrice");
+
+class Product {
+    constructor(name, description, category, price) {
+      this.name = name;
+      this.description = description;
+      this.category = category;
+      this.price = price;
+    }
+  }
 
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
