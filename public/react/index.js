@@ -79,7 +79,7 @@ function updateInventoryList() {
 
     let itemPrice = document.createElement('div');
     itemPrice.classList.add('item-price');
-    itemPrice.textContent = inventory[i].price;
+    itemPrice.textContent = "£" + inventory[i].price;
 
     // Append the inner div elements to the item-info div
     itemInfo.appendChild(itemTitle);
