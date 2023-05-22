@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 
+<script>
+  function myFunction() {
+    document.getElementById("demo").style.color = "red";
+  }
+  </script>
+
+<script>
+  function myFunction2() {
+    document.getElementById("demo2").style.color = "blue";
+  }
+  </script>
+
+
+
 <head>
   <title>Inventory Item</title>
   <style>
@@ -62,15 +76,22 @@
 <body>
   <div class="container">
     <div class="item">
-      <button type="submit">
-        <img src="deleteitemicon.png" alt="buttonpng" width="50" height="50" />
-      </button>
       <img src="item-image.jpg" alt="Item Image">
       <div class="item-info">
         <div class="item-title">Product Title</div>
         <div class="item-description">Product Description</div>
         <div class="item-category">Product category</div>
         <div class="item-price">Product price</div>
+        <button type="submit">
+          <img src="deleteitemicon.png" alt="buttonpng" width="50" height="50" onClick="myFunction()" />
+        </button>
+        <button type="submit">
+          <img src="edititemicon.png" alt="buttonpng" width="50" height="50" onClick="myFunction2()"/>
+
+          
+        </button>
+        <p id="demo" onclick="myFunction()">Click me to change my text color.</p>
+        <p id="demo2" onclick="myFunction()">Click me to change my text color.</p>
       </div>
     </div>
   </div>
