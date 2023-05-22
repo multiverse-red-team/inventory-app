@@ -16,6 +16,7 @@ body {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -80,7 +81,7 @@ input[type="submit"] {
   margin: 10px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   transition: transform 0.3s ease-in-out;
 }
