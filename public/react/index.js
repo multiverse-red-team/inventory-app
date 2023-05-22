@@ -17,7 +17,7 @@ let list = document.querySelector(".list");
 let inputName = document.querySelector(".inputName");
 let inputDescription = document.querySelector(".inputDescription");
 let inputCategory = document.querySelector(".inputCategory");
-let inpuPrice= document.querySelector(".inputPrice");
+let inputPrice= document.querySelector(".inputPrice");
 
 class Product {
     constructor(name, description, category, price) {
@@ -30,10 +30,18 @@ class Product {
 
 addButton.addEventListener('click', (event) => {
   event.preventDefault();
-  inventory.push(inputProduct.value);
-  inputProduct.value = '';
+
+  let newProduct = new Product(inputName.value, inputDescription.value, inputCategory.value, inputPrice.value);
+
+  inventory.push(inputName.value);
+  
   updateInventoryList();
   console.log(inventory);
+
+  inputName.value = '';
+  inputDescription.value = '';
+  inputCategory.value = '';
+  inputPrice.value = '';
 });
 
 function updateInventoryList() {
