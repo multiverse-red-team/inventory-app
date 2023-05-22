@@ -1,0 +1,68 @@
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+
+
+        <div id="tester">
+            <div class="container">
+              <div class="item">
+                <img src="item-image.jpg" alt="Item Image">
+                <div class="item-info">
+                  <div class="item-title">Product Title</div>
+                  <div class="item-description">Product Description</div>
+                  <div class="item-category">Product category</div>
+                  <div class="item-price">Product price</div>
+                  <button type="submit">
+                    <img src="deleteitemicon.jpg" alt="buttonpng" width="50" height="50" onClick="myFunction()" />
+                  </button>
+                  <button type="submit">
+                    <img src="edititemicon.jpg" alt="buttonpng" width="50" height="50" onClick="myFunction2()"/>
+          
+                    
+                  </button>
+                  <p id="demo" onclick="myFunction()">Click button to change color.</p>
+                  <p id="demo2" onclick="myFunction()">Click button to change color.</p>
+                </div>
+              </div>
+            </div>
+          </body>
+        </div>
+          
+
+
+        <script> 
+        function clickTest() {
+            document.getElementById("tester");    
+        }
+        
+        
+        </script>
+
+
+<div class="main">
+        <h1>Inventory Managment System!</h1>
+        <h3>Add item:</h3>
+        <form>
+            <input type="text" placeholder="Product" class="inputProduct" required>
+            <input type="text" placeholder="Description" class="inputDescription" required>
+            <input type="text" placeholder="Catagory" class="inputCatagory" required>
+            <input type="number" placeholder="Price" class="inputPrice" required>
+            <input type="submit" class="addButton" onClick="clickTest()">
+        </form>
+
+        <h2>Current Inventory:</h2>
+        <ul class="list">
+
+        </ul>
+
+</div>
+
+
+        <div id="root"></div>
+        <script type="module" src="./react/index.js"></script>
+    </body>
+</html>
