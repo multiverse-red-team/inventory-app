@@ -1,7 +1,5 @@
 ![logo](https://user-images.githubusercontent.com/44912347/202296600-c5f247d6-9616-49db-88f0-38433429d781.jpg)
 
-This is a test!
-
 # Inventory App
 You are a team of developers for an e-commerce company. The Engineering team  is rebuilding their inventory tracking app from the ground up. Your team has been tasked with creating a Full-Sack (front and back end) RESTful CRUD application to track the items.
 
