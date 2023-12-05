@@ -26,12 +26,16 @@ function Item({item}) {
   let shortDesc = item.description.split(".");
 
   return (
-    <div>
-      <img src={item.image} alt="item" />
+    <div className="item">
+      <div>
+        <img src={item.image} alt="item" />
+      </div>
+      <div className="item-details">
       <h2>{item.name}</h2>
       <p>${item.price}</p>
       <p>{item.category}</p>
       <p>{shortDesc[0]}</p>
+      </div>
       {id && <div>
       <button onClick={() =>deleteItem(item.id)}>Delete</button>
       <button>Edit</button></div>}
