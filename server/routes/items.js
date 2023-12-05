@@ -2,13 +2,17 @@ const express = require("express");
 const { Item } = require("../models/index");
 const router = express.Router();
 
-router.use(express.json())
-router.use(express.urlencoded())
+router.use(express.json());
+router.use(express.urlencoded());
 
 // Get All Items
-router.get("/", async (req, res) => {
-  const items = await Item.findAll();
-  res.json(items);
+router.get("/", async (req, res, next) => {
+  try {
+    const items = await Item.findAll();
+    res.json(items);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.get("/:id", async (req, res, next) => {
@@ -31,5 +35,15 @@ router.delete("/:id", async(req,res) =>{
   await item.destroy()
   res.send("Item deleted")
 })
+
+router.post("/", async (req, res, next) => {
+  try {
+    const item = await Item.create(req.body);
+
+    res.json(item);
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;
