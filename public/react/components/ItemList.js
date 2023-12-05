@@ -11,6 +11,7 @@ function ItemList() {
     try {
       const response = await fetch(`${apiURL}/items`);
       const itemData = await response.json();
+      console.log(itemData, "ID")
       setItems(itemData);
     } catch (err) {
       console.log("Oh no an error! ", err);
@@ -21,6 +22,7 @@ function ItemList() {
     fetchItems();
   }, []);
 
+  console.log(`items`, items)
   return (
     <div>
       <h1>Sauce Store</h1>

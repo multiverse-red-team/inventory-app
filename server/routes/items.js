@@ -21,4 +21,15 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+
+router.delete("/:id", async(req,res) =>{
+  const item = await Item.findByPk(req.params.id);
+  console.log(`item`, item)
+  if (!item) {
+    return res.status(404).send('Item not found');
+  }
+  await item.destroy()
+  res.send("Item deleted")
+})
+
 module.exports = router;

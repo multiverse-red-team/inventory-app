@@ -1,26 +1,29 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-
+import { redirect, useLocation, useNavigate, useParams} from "react-router-dom";
+import apiURL from "../api";
 function Item({item}) {
+  console.log(item)
   let data = useLocation();
+  let navigate = useNavigate()
   if(data?.state?.item){
     item = data?.state?.item;
   }
-
+  let {id} = useParams()
 
   //   const [singleItem, setSingleItem] = useState({});
 
 
 
-  // async function oneItem(id) {
-  //   try {
-  //     const response = await fetch(`${apiURL}/items/${id}`);
-  //     const data = await response.json();
-  //     setItems([data]);
-  //   } catch (error) {
-  //     console.log("Oh no an error!", error);
-  //   }
-  // }
+  async function deleteItem(itemId) {
+      const response = await fetch(`${apiURL}/items/${itemId}`, {method: "DELETE"});
+      const data = await response.text();
+      console.log(data);
+      if(id){
+        navigate("/")
+      }
+
+    }
+
 
   let shortDesc = item.description.split(".");
 
@@ -31,6 +34,10 @@ function Item({item}) {
       <p>${item.price}</p>
       <p>{item.category}</p>
       <p>{shortDesc[0]}</p>
+      {id && <div>
+      <button onClick={() =>deleteItem(item.id)}>Delete</button>
+      <button>Edit</button></div>}
+
     </div>
   );
 }
