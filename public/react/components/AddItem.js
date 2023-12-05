@@ -21,8 +21,6 @@ function AddItem() {
         body: JSON.stringify({ name, price, category, description, image }),
       });
 
-      console.log(response);
-
       if (!response.ok) {
         throw new Error("post was not succesful");
       }
