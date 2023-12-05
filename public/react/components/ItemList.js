@@ -26,7 +26,12 @@ function ItemList() {
       <h1>Sauce Store</h1>
       <h2>All Items</h2>
       {items.map((item) => (
-        <Link to={`/items/${item.id}`}><Item key={item.id} item={item}/></Link>
+        <Link
+        to={`/items/${item.id}`}
+      state={{item}}
+        >
+          <Item key={item.id} item={item}/>
+          </Link>
       ))}
     </div>
   );

@@ -14,6 +14,7 @@ export const App = () => {
       <p>Nav</p>
       <Routes>
         <Route path="/" element={<ItemList />}/>
+        <Route path="/items/:id" element={<Item />}/>
       </Routes>
     </main>
   );

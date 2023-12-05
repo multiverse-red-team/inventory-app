@@ -1,9 +1,16 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 function Item({item}) {
+  let data = useLocation();
+  if(data?.state?.item){
+    item = data?.state?.item;
+  }
+
+
   //   const [singleItem, setSingleItem] = useState({});
 
-  
+
 
   // async function oneItem(id) {
   //   try {
