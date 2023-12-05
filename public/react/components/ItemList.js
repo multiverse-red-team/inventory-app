@@ -24,7 +24,6 @@ function ItemList() {
   console.log(`items`, items)
   return (
     <div>
-      <h1>Sauce Store</h1>
       <h2>All Items</h2>
       {items.map((item) => (
         <div key={item.id}>
