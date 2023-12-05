@@ -2,7 +2,6 @@ import React from "react";
 import { redirect, useLocation, useNavigate, useParams} from "react-router-dom";
 import apiURL from "../api";
 function Item({item}) {
-  console.log(item)
   let data = useLocation();
   let navigate = useNavigate()
   if(data?.state?.item){
@@ -17,7 +16,6 @@ function Item({item}) {
   async function deleteItem(itemId) {
       const response = await fetch(`${apiURL}/items/${itemId}`, {method: "DELETE"});
       const data = await response.text();
-      console.log(data);
       if(id){
         navigate("/")
       }
