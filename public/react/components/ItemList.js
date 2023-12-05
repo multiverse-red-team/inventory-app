@@ -4,7 +4,6 @@ import apiURL from "../api";
 import { Link } from "react-router-dom";
 
 function ItemList() {
-
   const [items, setItems] = useState([]);
 
   async function fetchItems() {
@@ -26,12 +25,11 @@ function ItemList() {
       <h1>Sauce Store</h1>
       <h2>All Items</h2>
       {items.map((item) => (
-        <Link
-        to={`/items/${item.id}`}
-      state={{item}}
-        >
-          <Item key={item.id} item={item}/>
+        <div key={item.id}>
+          <Link to={`/items/${item.id}`} state={{ item }}>
+            <Item item={item} />
           </Link>
+        </div>
       ))}
     </div>
   );
