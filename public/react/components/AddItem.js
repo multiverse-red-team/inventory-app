@@ -12,25 +12,37 @@ function AddItem() {
   const navigate = useNavigate();
 
   async function postItem() {
-    const response = await fetch(`/${apiURL}/items`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, price, category, description, image }),
-    });
+    try {
+      const response = await fetch(`${apiURL}/items`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, price, category, description, image }),
+      });
 
-    if (!response.ok) {
-      throw new Error("post was not succesful");
+      console.log(response);
+
+      if (!response.ok) {
+        throw new Error("post was not succesful");
+      }
+
+      const data = await response.json();
+
+      console.log("POST was succesful", data);
+    } catch (error) {
+      console.log(error);
     }
-
-    const data = await response.json();
-
-    console.log("POST was succesful", data);
   }
 
-  async function handleSubmit() {
-    await postItem();
+  async function handleSubmit(event) {
+    event.preventDefault();
+    postItem();
+    setName("");
+    setPrice(0);
+    setCategory("");
+    setDescription("");
+    setImage("");
     navigate("/");
   }
 
