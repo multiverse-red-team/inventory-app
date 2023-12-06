@@ -12,7 +12,7 @@ function ItemList() {
     try {
       const response = await fetch(`${apiURL}/items`);
       const itemData = await response.json();
-      console.log(itemData, "ID")
+    //   console.log(itemData, "ID")
       setItems(itemData);
     } catch (err) {
       console.log("Oh no an error! ", err);
@@ -28,7 +28,8 @@ function ItemList() {
   const itemData = searchBy === "All" ? items : categoryFilter
 
 //   console.log(itemData)
-//   const filteredItems = search.trim() === "" ? itemData : itemData.filter((item) => item.name === search)
+  const filteredItems = search.trim() === "" ? itemData : itemData.filter((item) => item.name.toLowerCase().includes(search) || item.name.includes(search))
+
 
   let categories = []
   items.map((item) => {
@@ -63,12 +64,12 @@ function ItemList() {
 			<button>Submit</button>
 		 </div>
 		 </form>
-      {itemData.map((item) => (
-        // <div key={item.id}>
+      {filteredItems.map((item) => (
+        <div key={item.id}>
           <Link to={`/items/${item.id}`} state={{ item }}>
             <Item item={item} />
           </Link>
-        // </div>
+    	</div>
       ))}
       </div>
   );
