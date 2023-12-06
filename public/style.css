@@ -44,16 +44,19 @@ a:hover{
 }
 
 .item{
-  border:5px solid black;
+  border-radius: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2%;
+  background-color: white;
+
 }
 
 .item img{
   width: 40%;
   height: 40%;
+  border-radius: 25px;
 }
 
 .item-details{
