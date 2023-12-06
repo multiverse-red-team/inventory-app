@@ -60,7 +60,7 @@ a:hover {
   border-radius: 25px;
 }
 
-.item-details {
+.itemhome >.item-details {
   text-align: center;
   padding-right: 5%;
 }
@@ -271,6 +271,13 @@ input:focus {
   }
   .itemhome img{
     min-width: 125px;
-    min-height: 150px;
+    min-height: 125px;
+  }
+  .item-details {
+    text-align: center;
+    padding: 2%;
+  }
+  .itemhome > .item-details > .name{
+    font-size:medium;
   }
 }
