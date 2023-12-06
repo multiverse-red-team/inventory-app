@@ -55,22 +55,23 @@ function Item({ item }) {
 
   if (!isEdit) {
     return (
-      <div className={id ? "itemhome" : "item"}>
+      <div className={id ? "item" : "itemhome"}>
         <div className="item-img">
           <img src={item.image} alt="item" />
         </div>
         <div className="item-details">
-          <h2>{updatedItem.name}</h2>
-          <p>${updatedItem.price}</p>
-          <p>{updatedItem.category}</p>
+          <h2 className="name">{updatedItem.name}</h2>
+          <p className="price">${updatedItem.price}</p>
+          <p className="category">{updatedItem.category}</p>
+          {id && <div className="buttons">
+            <button onClick={() => deleteItem(item.id)}>Delete</button>
+            <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
+          </div>}
         </div>
-        {id && <div>
-          <button onClick={() => deleteItem(item.id)}>Delete</button>
-          <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
-        </div>}
         {id && <p>{shortDesc[0]}</p>}
       </div>
-  )} else {
+    )
+  } else {
     return (
       <>
         <div>
@@ -111,14 +112,14 @@ function Item({ item }) {
                 value={updatedItem.description}
                 onChange={handleChange}
               />
-      <div id="edit-buttons">
-        <button onClick={cancel}>Cancel</button>
-        <button type="submit">Save Changes</button>
-      </div>
-    </form>
-      </div >
-      </div >
-    </>
+              <div id="edit-buttons">
+                <button onClick={cancel}>Cancel</button>
+                <button type="submit">Save Changes</button>
+              </div>
+            </form>
+          </div >
+        </div >
+      </>
     )
   }
 }

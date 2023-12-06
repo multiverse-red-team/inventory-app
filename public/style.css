@@ -43,7 +43,7 @@ a:hover{
   padding: 2%;
 }
 
-.item{
+.itemhome{
   width: 100%;
   max-width: 900px;
   border-radius: 25px;
@@ -54,7 +54,7 @@ a:hover{
   background-color: white;
 }
 
-.item img{
+.itemhome img{
   width: 20%;
   height: 40%;
   min-width: 250px;
@@ -105,16 +105,46 @@ a:hover{
   justify-content: space-evenly;
 }
 
-.itemhome{
+.item{
   border: 5px solid red;
   margin: 2.5%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.itemhome img{
-  border: 2px solid dodgerblue;
+.item .item-img{
+  min-width: 600px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
-.itemhome .item-details{
+.item img{
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 25px;
+}
+
+.item > .item-details{
   border: 3px solid green;
+  min-width: 1000px;
+  padding: 2.5%;
+}
+
+
+.item > .item-details > .name{
+  border: 1px solid purple;
+  /* inline-size: 300px; */
+  text-wrap: wrap;
+  text-align: center;
+}
+.item > .item-details > .price, .item > .item-details > .category{
+  text-align: left;
+  font-size: larger;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
 }
