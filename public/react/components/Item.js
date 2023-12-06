@@ -50,11 +50,15 @@ function Item({item}) {
   if (!isEdit) {
   return (
     <div className={id ? "itemhome" : "item"}>
-      <img src={item.image} alt="item" />
+      <div className="item-img">
+        <img src={item.image} alt="item" />
+      </div>
+      <div className="item-details">
       <h2>{item.name}</h2>
       <p>${item.price}</p>
       <p>{item.category}</p>
       <p>{shortDesc[0]}</p>
+      </div>
       {id && <div>
       <button onClick={() =>deleteItem(item.id)}>Delete</button>
         <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
