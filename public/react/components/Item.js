@@ -27,7 +27,7 @@ function Item({item}) {
 
   return (
     <div className="item">
-      <div>
+      <div className="item-img">
         <img src={item.image} alt="item" />
       </div>
       <div className="item-details">
