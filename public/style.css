@@ -68,3 +68,32 @@ a:hover{
 
 /* @media screen and (max-width: 500px){
 } */
+
+
+
+#edit-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+#edit-form input {
+  width: fit-content;
+}
+
+#edit-form textarea {
+  width: 35%;
+  min-height: fit-content;
+  resize: none;
+}
+
+#edit-form button {
+  width: fit-content;
+}
+
+#edit-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;

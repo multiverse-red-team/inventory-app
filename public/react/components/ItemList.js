@@ -23,7 +23,6 @@ function ItemList() {
 
   console.log(`items`, items)
   return (
-
       <div id="item-list">
          <h1>All Items In Inventory</h1>
       {items.map((item) => (

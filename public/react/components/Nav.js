@@ -11,7 +11,7 @@ function Nav() {
             </div>
             <div>
                 <Link to="/addItem">
-                    <p>Add Item</p>
+                    <h2>Add Item</h2>
                 </Link>
             </div>
 	    </div>
