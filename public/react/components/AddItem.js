@@ -21,8 +21,6 @@ function AddItem() {
         body: JSON.stringify({ name, price, category, description, image }),
       });
 
-      console.log(response);
-
       if (!response.ok) {
         throw new Error("post was not succesful");
       }
@@ -48,50 +46,63 @@ function AddItem() {
 
   return (
     <div>
-      <h4>Add Item</h4>
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          placeholder="item name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-        />
+      <div className="add">
+        <h4 className="add-h4">Add an Item to Inventory</h4>
+        <form className="add-form" onSubmit={handleSubmit}>
+          <label className="add-label">Name:</label>
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Item name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
 
-        <label>Price:</label>
-        <input
-          type="number"
-          placeholder="item price"
-          value={price}
-          onChange={(event) => setPrice(event.target.value)}
-        />
+          <label className="add-label">Price:</label>
+          <input
+            className="form-input"
+            type="number"
+            placeholder="item price"
+            value={price}
+            onChange={(event) => setPrice(event.target.value)}
+          />
 
-        <label>Category:</label>
-        <input
-          type="text"
-          placeholder="item category"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
-        />
+          <label className="add-label">Category:</label>
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Item category"
+            value={category}
+            onChange={(event) => setCategory(event.target.value)}
+          />
 
-        <label>Description:</label>
-        <input
-          type="text"
-          placeholder="item description"
-          value={description}
-          onChange={(event) => setDescription(event.target.value)}
-        />
+          <label className="add-label">Description:</label>
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Item description"
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
 
-        <label>Image:</label>
-        <input
-          type="text"
-          placeholder="item image"
-          value={image}
-          onChange={(event) => setImage(event.target.value)}
-        />
+          <label className="add-label">Image:</label>
+          <input
+            className="form-input"
+            type="text"
+            placeholder="Item image"
+            value={image}
+            onChange={(event) => setImage(event.target.value)}
+          />
 
-        <button type="submit">Submit</button>
-      </form>
+          <br />
+          <br />
+          <div className="add-button-div">
+            <button className="add-button" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
