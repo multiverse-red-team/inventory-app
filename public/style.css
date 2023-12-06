@@ -38,11 +38,17 @@ a:hover{
   padding: 0 10%;
 }
 
+#item-list h1{
+  text-align: center;
+  padding: 2%;
+}
+
 .item{
   border:5px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2%;
 }
 
 .item img{
@@ -51,6 +57,7 @@ a:hover{
 }
 
 .item-details{
+  text-align: center;
   padding-right: 5%;
 }
 
