@@ -23,14 +23,14 @@ function ItemList() {
 
   console.log(`items`, items)
   return (
-    <div>
-      <h2>All Items</h2>
+    <div id="item-list">
+      <h1>All Items In Inventory</h1>
       {items.map((item) => (
-        <div key={item.id}>
+        // <div key={item.id}>
           <Link to={`/items/${item.id}`} state={{ item }}>
             <Item item={item} />
           </Link>
-        </div>
+        // </div>
       ))}
     </div>
   );
