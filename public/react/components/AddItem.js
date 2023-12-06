@@ -46,19 +46,21 @@ function AddItem() {
 
   return (
     <div>
-      <h4>Add Item</h4>
       <div className="add">
+        <h4 className="add-h4">Add an Item to Inventory</h4>
         <form className="add-form" onSubmit={handleSubmit}>
           <label className="add-label">Name:</label>
           <input
+            className="form-input"
             type="text"
-            placeholder="item name"
+            placeholder="Item name"
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
 
           <label className="add-label">Price:</label>
           <input
+            className="form-input"
             type="number"
             placeholder="item price"
             value={price}
@@ -67,29 +69,38 @@ function AddItem() {
 
           <label className="add-label">Category:</label>
           <input
+            className="form-input"
             type="text"
-            placeholder="item category"
+            placeholder="Item category"
             value={category}
             onChange={(event) => setCategory(event.target.value)}
           />
 
           <label className="add-label">Description:</label>
           <input
+            className="form-input"
             type="text"
-            placeholder="item description"
+            placeholder="Item description"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
 
           <label className="add-label">Image:</label>
           <input
+            className="form-input"
             type="text"
-            placeholder="item image"
+            placeholder="Item image"
             value={image}
             onChange={(event) => setImage(event.target.value)}
           />
 
-          <button type="submit">Submit</button>
+          <br />
+          <br />
+          <div className="add-button-div">
+            <button className="add-button" type="submit">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     </div>
