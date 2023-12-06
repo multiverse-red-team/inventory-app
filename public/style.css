@@ -115,10 +115,10 @@ a:hover{
 
 .item .item-img{
   min-width: 600px;
-  min-height: 600px;
   display: flex;
   justify-content: center;
   background-color: white;
+  max-height: 550px;
 
 }
 
@@ -135,12 +135,11 @@ a:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 400px;
 }
 
 
 .item > .item-details > .name{
-  border: 1px solid purple;
-  /* inline-size: 300px; */
   text-wrap: wrap;
   text-align: center;
 }
@@ -151,9 +150,10 @@ a:hover{
 }
 
 .item > .item-details > .det{
-  display: inline-flex;
   border: 1px solid red;
   padding: 0;
+  font-size: x-large;
+  text-align: left;
 }
 .buttons{
   display: flex;

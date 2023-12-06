@@ -61,8 +61,10 @@ function Item({ item }) {
         </div>
         <div className="item-details">
           <h2 className="name">{updatedItem.name}</h2>
-          <p className="price det">${updatedItem.price}</p>
-          <p className="category det">{updatedItem.category}</p>
+          <div className="det">
+          <p className="price">List Price: ${updatedItem.price}</p>
+          <p className="category">In: {updatedItem.category}</p>
+          </div>
           {id && <div className="buttons">
             <button onClick={() => deleteItem(item.id)}>Delete</button>
             <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
