@@ -33,7 +33,8 @@ function Item({item}) {
     })
     if (res.ok) {
     const data = await res.json()
-
+    setUpdatedItem(data)
+    setIsEdit(!isEdit)
   }
   } 
 
@@ -41,6 +42,11 @@ function Item({item}) {
     const name = e.target.name
     const value = e.target.value
     setUpdatedItem({...updatedItem, [name]: value})
+  }
+
+  function cancel() {
+    setUpdatedItem(item)
+    setIsEdit(!isEdit)
   }
   
   
@@ -54,9 +60,9 @@ function Item({item}) {
         <img src={item.image} alt="item" />
       </div>
       <div className="item-details">
-      <h2>{item.name}</h2>
-      <p>${item.price}</p>
-      <p>{item.category}</p>
+      <h2>{updatedItem.name}</h2>
+      <p>${updatedItem.price}</p>
+      <p>{updatedItem.category}</p>
       <p>{shortDesc[0]}</p>
       </div>
       {id && <div>
@@ -70,17 +76,19 @@ function Item({item}) {
       <div>
       <img src={item.image} alt="item" />
       <div id="edit-container">
-      <form id="edit-form">
+      <form id="edit-form" onSubmit={updateItem}>
       <label>Name:</label>
       <input
-          name="name"
-          type="text"
-          placeholder="item name"
-          value={updatedItem.name}
-          onChange={handleChange}
+        id="name-input"
+        name="name"
+        type="text"
+        placeholder="item name"
+        value={updatedItem.name}
+        onChange={handleChange}
         />
       <label>Price:</label>
         <input
+          className="form-inputs"
           name="price"
           type="number"
           placeholder="item price"
@@ -89,6 +97,7 @@ function Item({item}) {
         />
       <label>Category:</label>
         <input
+          className="form-inputs"
           name="category"
           type="text"
           placeholder="item category"
@@ -103,7 +112,7 @@ function Item({item}) {
           onChange={handleChange}
         />
       <div id="edit-buttons">  
-        <button onClick={() => setIsEdit(!isEdit)}>Cancel</button>
+        <button onClick={cancel}>Cancel</button>
         <button type="submit">Save Changes</button>
       </div>
       </form>
