@@ -9,9 +9,11 @@ function Item({ item }) {
   }
   let { id } = useParams()
 
+  
   const [isEdit, setIsEdit] = useState(false);
   const [updatedItem, setUpdatedItem] = useState(item)
-
+  
+  console.log(updatedItem)
 
 
   async function deleteItem(itemId) {
