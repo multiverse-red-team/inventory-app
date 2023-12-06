@@ -125,8 +125,10 @@ a:hover {
 
 .add-button {
   height: 38px;
+  width: 30%;
   padding: 0 10px;
   text-align: center;
+  font-size: large;
   font-weight: 600;
   letter-spacing: 0.05rem;
   background: #9fd3c7;

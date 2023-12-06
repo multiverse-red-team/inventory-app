@@ -54,6 +54,7 @@ function AddItem() {
             className="form-input"
             type="text"
             placeholder="Item name"
+            required={true}
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
@@ -62,7 +63,9 @@ function AddItem() {
           <input
             className="form-input"
             type="number"
+            min={0}
             placeholder="item price"
+            required={true}
             value={price}
             onChange={(event) => setPrice(event.target.value)}
           />
@@ -72,15 +75,17 @@ function AddItem() {
             className="form-input"
             type="text"
             placeholder="Item category"
+            required={true}
             value={category}
             onChange={(event) => setCategory(event.target.value)}
           />
 
           <label className="add-label">Description:</label>
-          <input
+          <textarea
             className="form-input"
             type="text"
             placeholder="Item description"
+            required={true}
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
@@ -90,6 +95,7 @@ function AddItem() {
             className="form-input"
             type="text"
             placeholder="Item image"
+            required={true}
             value={image}
             onChange={(event) => setImage(event.target.value)}
           />
