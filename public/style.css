@@ -65,8 +65,6 @@ a:hover {
   padding-right: 5%;
 }
 
-/* @media screen and (max-width: 500px){
-} */
 
 #edit-form {
   display: flex;
@@ -239,4 +237,40 @@ input:focus {
 .add-button-div {
   display: flex;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 500px){
+  * {
+    margin: 0;
+    /* box-sizing: border-box; */
+    /* background-color: rgb(223, 223, 223); */
+    font-family: "Roboto", sans-serif;
+  }
+  body{
+    border: 1px solid red;
+  }
+  #nav{
+    height: 5vh;
+    width: 100%;
+    font-size: smaller;
+  }
+  #nav h1 {
+    padding-left:0;
+  }
+  #item-list h1 {
+    font-size:larger;
+  }
+  #item-list {
+    padding: 0 7.5%;
+  }
+
+  .itemhome{
+    width: 100%;
+    max-width: 300px;
+  }
+  .itemhome img{
+    min-width: 125px;
+    min-height: 150px;
+  }
 }
