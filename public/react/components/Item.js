@@ -35,15 +35,15 @@ function Item({item}) {
     const data = await res.json()
 
   }
-  } 
+  }
 
   function handleChange(e) {
     const name = e.target.name
     const value = e.target.value
     setUpdatedItem({...updatedItem, [name]: value})
   }
-  
-  
+
+
   let shortDesc = item.description.split(".");
 
 
@@ -57,12 +57,13 @@ function Item({item}) {
       <h2>{item.name}</h2>
       <p>${item.price}</p>
       <p>{item.category}</p>
-      <p>{shortDesc[0]}</p>
-      </div>
       {id && <div>
       <button onClick={() =>deleteItem(item.id)}>Delete</button>
         <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
     </div>}
+      {id&& <p>{shortDesc[0]}</p>}
+      </div>
+
     </div>
   )} else {
     return (
@@ -102,7 +103,7 @@ function Item({item}) {
           value={updatedItem.description}
           onChange={handleChange}
         />
-      <div id="edit-buttons">  
+      <div id="edit-buttons">
         <button onClick={() => setIsEdit(!isEdit)}>Cancel</button>
         <button type="submit">Save Changes</button>
       </div>
