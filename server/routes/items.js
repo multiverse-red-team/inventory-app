@@ -25,6 +25,12 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  const item = await Item.findByPk(req.params.id)
+  const update = await item.update(req.body)
+  res.json(update)
+})
+
 
 router.delete("/:id", async(req,res) =>{
   const item = await Item.findByPk(req.params.id);
