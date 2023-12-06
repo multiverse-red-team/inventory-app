@@ -77,8 +77,12 @@ a:hover{
   padding-left: 10px;
 }
 
-#edit-form input {
+.form-inputs {
   width: fit-content;
+}
+
+#name-input {
+  width: 20%;
 }
 
 #edit-form textarea {
@@ -97,3 +101,4 @@ a:hover{
   width: 25%;
   display: flex;
   justify-content: space-evenly;
+}
