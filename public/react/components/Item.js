@@ -26,7 +26,7 @@ function Item({item}) {
   let shortDesc = item.description.split(".");
 
   return (
-    <div className="item">
+    <div className={id ? "itemhome" : "item"}>
       <div className="item-img">
         <img src={item.image} alt="item" />
       </div>
