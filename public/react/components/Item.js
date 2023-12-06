@@ -70,7 +70,7 @@ function Item({ item }) {
             <button onClick={() => setIsEdit(!isEdit)}>Edit</button>
           </div>}
         </div>
-        {id && <p className="description">{shortDesc[0]}</p>}
+        {id && <p className="description">About this item: {shortDesc[0]}</p>}
       </div>
     )
   } else {

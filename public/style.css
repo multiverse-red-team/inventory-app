@@ -106,11 +106,14 @@ a:hover{
 }
 
 .item{
-  border: 5px solid red;
   margin: 2.5%;
+  border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: white;
+  min-height: 100%;
+
 }
 
 .item .item-img{
@@ -119,6 +122,7 @@ a:hover{
   justify-content: center;
   background-color: white;
   max-height: 550px;
+  border-radius: 25px;
 
 }
 
@@ -129,7 +133,6 @@ a:hover{
 }
 
 .item > .item-details{
-  border: 3px solid green;
   min-width: 800px;
   padding: 2.5%;
   display: flex;
@@ -141,6 +144,7 @@ a:hover{
 
 .item > .item-details > .name{
   text-wrap: wrap;
+  max-width: 60ch;
   text-align: center;
 }
 .item > .item-details > .price, .item > .item-details > .category{
@@ -150,7 +154,6 @@ a:hover{
 }
 
 .item > .item-details > .det{
-  border: 1px solid red;
   padding: 0;
   font-size: x-large;
   text-align: left;
@@ -168,6 +171,17 @@ a:hover{
   font-size: 20px;
 }
 
-.buttons > button:hover{
+.button:hover{
+  background-color: #385170;
+  transition: 0.7s;
+}
 
+.description{
+  border-top: 1px solid;
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1%;
+  margin-top: 1%;
 }
