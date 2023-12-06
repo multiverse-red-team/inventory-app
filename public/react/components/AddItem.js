@@ -47,49 +47,51 @@ function AddItem() {
   return (
     <div>
       <h4>Add Item</h4>
-      <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input
-          type="text"
-          placeholder="item name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-        />
+      <div className="add">
+        <form className="add-form" onSubmit={handleSubmit}>
+          <label className="add-label">Name:</label>
+          <input
+            type="text"
+            placeholder="item name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
 
-        <label>Price:</label>
-        <input
-          type="number"
-          placeholder="item price"
-          value={price}
-          onChange={(event) => setPrice(event.target.value)}
-        />
+          <label className="add-label">Price:</label>
+          <input
+            type="number"
+            placeholder="item price"
+            value={price}
+            onChange={(event) => setPrice(event.target.value)}
+          />
 
-        <label>Category:</label>
-        <input
-          type="text"
-          placeholder="item category"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
-        />
+          <label className="add-label">Category:</label>
+          <input
+            type="text"
+            placeholder="item category"
+            value={category}
+            onChange={(event) => setCategory(event.target.value)}
+          />
 
-        <label>Description:</label>
-        <input
-          type="text"
-          placeholder="item description"
-          value={description}
-          onChange={(event) => setDescription(event.target.value)}
-        />
+          <label className="add-label">Description:</label>
+          <input
+            type="text"
+            placeholder="item description"
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
 
-        <label>Image:</label>
-        <input
-          type="text"
-          placeholder="item image"
-          value={image}
-          onChange={(event) => setImage(event.target.value)}
-        />
+          <label className="add-label">Image:</label>
+          <input
+            type="text"
+            placeholder="item image"
+            value={image}
+            onChange={(event) => setImage(event.target.value)}
+          />
 
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
