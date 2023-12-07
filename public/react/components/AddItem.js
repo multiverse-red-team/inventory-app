@@ -73,6 +73,7 @@ function AddItem() {
           <label className="add-label">Category:</label>
           <input
             className="form-input"
+            name="category"
             type="text"
             placeholder="Item category"
             required={true}

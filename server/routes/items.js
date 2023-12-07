@@ -5,7 +5,6 @@ const router = express.Router();
 router.use(express.json());
 router.use(express.urlencoded());
 
-// Get All Items
 router.get("/", async (req, res, next) => {
   try {
     const items = await Item.findAll();

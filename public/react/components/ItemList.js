@@ -12,7 +12,6 @@ function ItemList() {
     try {
       const response = await fetch(`${apiURL}/items`);
       const itemData = await response.json();
-    //   console.log(itemData, "ID")
       setItems(itemData);
     } catch (err) {
       console.log("Oh no an error! ", err);
@@ -21,13 +20,12 @@ function ItemList() {
 
   useEffect(() => {
     fetchItems();
-  }, []); 
+  }, [items]); 
 
   const categoryFilter = items.filter((item) => item.category === searchBy)
   
   const itemData = searchBy === "All" ? items : categoryFilter
 
-//   console.log(itemData)
   const filteredItems = search.trim() === "" ? itemData : itemData.filter((item) => item.name.toLowerCase().includes(search) || item.name.includes(search))
 
 
@@ -38,9 +36,6 @@ function ItemList() {
 	}
   })
 
-//   const searchOptions = items.map((item) => {
-// 		<option>{item.category}</option>
-//   })
   
   return (
       <div id="item-list">
