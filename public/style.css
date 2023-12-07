@@ -200,7 +200,6 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid green;
 }
 
 .add-form, #edit-form {
