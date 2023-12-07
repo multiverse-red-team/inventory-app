@@ -60,13 +60,11 @@ a:hover {
   border-radius: 25px;
 }
 
-.item-details {
+.itemhome >.item-details {
   text-align: center;
   padding-right: 5%;
 }
 
-/* @media screen and (max-width: 500px){
-} */
 
 #edit-form {
   display: flex;
@@ -111,7 +109,7 @@ a:hover {
 
 }
 
-.item .item-img{
+.item >.item-img{
   min-width: 600px;
   display: flex;
   justify-content: center;
@@ -119,6 +117,12 @@ a:hover {
   max-height: 550px;
   border-radius: 25px;
 
+}
+
+.item-img-edit{
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 25px;
 }
 
 .item img{
@@ -239,4 +243,93 @@ input:focus {
 .add-button-div {
   display: flex;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 500px){
+  * {
+    margin: 0;
+    /* box-sizing: border-box; */
+    /* background-color: rgb(223, 223, 223); */
+    font-family: "Roboto", sans-serif;
+  }
+  #nav{
+    height: 5vh;
+    width: 100%;
+    font-size: smaller;
+  }
+  #nav h1 {
+    padding-left:0;
+  }
+  #item-list h1 {
+    font-size:larger;
+  }
+  #item-list {
+    padding: 0 7.5%;
+  }
+
+  .itemhome{
+    width: 100%;
+    max-width: 300px;
+  }
+  .itemhome img{
+    min-width: 125px;
+    min-height: 125px;
+  }
+  .item-details {
+    text-align: center;
+    padding: 2%;
+  }
+  .itemhome > .item-details > .name{
+    font-size:medium;
+  }
+
+  .item{
+    margin: 5% 2% 2% 0%;
+    border: 1px solid black;
+    display: block;
+    min-height: 70%;
+    padding: 1%;
+  }
+
+
+
+  .item  > .item-img > img{
+    max-width: 200px;
+    max-height: 300px;
+  }
+
+  .item > .item-img{
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  .item > .item-details{
+    min-width: 200px;
+    padding: 2.5%;
+    margin-bottom: 10%;
+  }
+  .description{
+    margin-bottom: 10%;
+  }
+}
+
+/* @media screen and (min-width: 501px) and (max-width: 899px){
+
+} */
+
+.search-bar {
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-bar select {
+  text-align: center;
+}
+.search-bar input {
+  margin-left: 5px;
 }
