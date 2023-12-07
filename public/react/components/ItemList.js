@@ -21,10 +21,10 @@ function ItemList() {
 
   useEffect(() => {
     fetchItems();
-  }, []); 
+  }, [items]);
 
   const categoryFilter = items.filter((item) => item.category === searchBy)
-  
+
   const itemData = searchBy === "All" ? items : categoryFilter
 
 //   console.log(itemData)
@@ -41,7 +41,7 @@ function ItemList() {
 //   const searchOptions = items.map((item) => {
 // 		<option>{item.category}</option>
 //   })
-  
+
   return (
       <div id="item-list">
          <h1>All Items In Inventory</h1>
@@ -54,7 +54,7 @@ function ItemList() {
 			</select>
 		 <form>
 			<label>Search: </label>
-			<input 
+			<input
 				type="text"
 				name="name"
         		placeholder="search items..."
