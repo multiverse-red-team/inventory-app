@@ -355,6 +355,17 @@ input:focus {
   #edit-buttons > .submit{
     font-size: small;
   }
+  .search-bar{
+    display: flex;
+    align-items: center;
+    min-width: 360px;
+    justify-content: space-around;
+    margin: 5% 0%;
+  }
+  .search-bar select{
+    height: min-content;
+    width: min-content;
+  }
 }
 
 /* @media screen and (min-width: 501px) and (max-width: 899px){
@@ -366,6 +377,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 2.5%;
 }
 
 .search-bar select {
