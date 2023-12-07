@@ -76,8 +76,8 @@ function Item({ item }) {
   } else {
     return (
       <>
-        <div>
-          <img src={item.image} alt="item" />
+        <div className="item-edit">
+          <img src={item.image} alt="item" className="item-img-edit"/>
           <div id="edit-container">
             <form id="edit-form" onSubmit={updateItem}>
               <label>Name:</label>
