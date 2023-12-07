@@ -3,11 +3,7 @@ import { useNavigate } from "react-router";
 import apiURL from "../api";
 
 function AddItem() {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
+  const [item, setItem] = useState({});
 
   const navigate = useNavigate();
 
@@ -18,7 +14,7 @@ function AddItem() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, price, category, description, image }),
+        body: JSON.stringify(item),
       });
 
       if (!response.ok) {
@@ -36,13 +32,17 @@ function AddItem() {
   async function handleSubmit(event) {
     event.preventDefault();
     postItem();
-    setName("");
-    setPrice(0);
-    setCategory("");
-    setDescription("");
-    setImage("");
+    setItem({});
     navigate("/");
   }
+
+  function handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    setItem({ ...item, [name]: value });
+  }
+
+  console.log(item);
 
   return (
     <div>
@@ -51,54 +51,59 @@ function AddItem() {
         <form className="add-form" onSubmit={handleSubmit}>
           <label className="add-label name-label">Name:</label>
           <input
+            name="name"
             className="form-input"
             type="text"
             placeholder="Item name"
             required={true}
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            value={item.name}
+            onChange={handleChange}
           />
 
           <label className="add-label">Price:</label>
           <input
+            name="price"
             className="form-input"
             type="number"
             min={0}
             placeholder="item price"
             required={true}
-            value={price}
-            onChange={(event) => setPrice(event.target.value)}
+            value={item.price}
+            onChange={handleChange}
           />
 
           <label className="add-label">Category:</label>
           <input
+            name="category"
             className="form-input"
             name="category"
             type="text"
             placeholder="Item category"
             required={true}
-            value={category}
-            onChange={(event) => setCategory(event.target.value)}
+            value={item.category}
+            onChange={handleChange}
           />
 
           <label className="add-label">Description:</label>
           <textarea
+            name="description"
             className="form-input"
             type="text"
             placeholder="Item description"
             required={true}
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
+            value={item.description}
+            onChange={handleChange}
           />
 
           <label className="add-label">Image:</label>
           <input
+            name="image"
             className="form-input"
             type="text"
             placeholder="Item image"
             required={true}
-            value={image}
-            onChange={(event) => setImage(event.target.value)}
+            value={item.image}
+            onChange={handleChange}
           />
 
           <br />
