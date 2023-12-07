@@ -65,26 +65,27 @@ a:hover {
   padding-right: 5%;
 }
 
-
+#edit-container{
+  width: 100%;
+}
 #edit-form {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
 }
 
 .form-inputs {
   width: fit-content;
 }
 
-#name-input {
+/* #name-input {
   width: 20%;
-}
+} */
 
-#edit-form textarea {
+/* #edit-form textarea {
   width: 35%;
   min-height: fit-content;
   resize: none;
-}
+} */
 
 #edit-form button {
   width: fit-content;
@@ -93,9 +94,12 @@ a:hover {
 #edit-buttons {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 25%;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.submit{
+  margin: 1%;
 }
 
 .item{
@@ -120,8 +124,10 @@ a:hover {
 }
 
 .item-img-edit{
-  max-width: 600px;
-  max-height: 600px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 45px;
+  max-height: 450px;
   border-radius: 25px;
 }
 
@@ -186,17 +192,24 @@ a:hover {
   padding: 1%;
   margin-top: 1%;
 }
-.add {
+.add, .item-edit {
   margin: 1em;
   display: inline;
+
+}
+.item-edit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.add-form {
+.add-form, #edit-form {
   padding: 30 100 30 100;
   margin: 30px 200px 30px 200px;
 }
 
-.add-label {
+.add-label, .name-label {
   display: block;
   margin: 10px 0 10px 0;
   font-weight: bold;
@@ -211,7 +224,7 @@ a:hover {
   color: #142d4c;
 }
 
-.add-button {
+.add-button, .submit {
   height: 38px;
   width: 30%;
   padding: 0 10px;
@@ -229,7 +242,7 @@ a:hover {
 .form-input {
   width: 100%;
   height: 35px;
-  border: 1px solid #9fd3c7;
+  border: 2px solid #9fd3c7;
   border-radius: 7px;
   text-align: left;
   padding: 10px;
@@ -314,6 +327,45 @@ input:focus {
   .description{
     margin-bottom: 10%;
   }
+
+  .add-form, #edit-form {
+    padding: 15 50 15 50;
+    margin: 15px 25px 15px 25px;
+  }
+
+  .add-label, .name-label {
+    display: block;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+    text-align: left;
+    color: #142d4c;
+  }
+  .add-h4{
+    font-size:x-large;
+  }
+  .add-button{
+    padding: 0 5px;
+    width: fit-content;
+  }
+  .item-img-edit{
+    min-width: 175px;
+    min-height: 175px;
+    border-radius: 25px;
+  }
+  #edit-buttons > .submit{
+    font-size: small;
+  }
+  .search-bar{
+    display: flex;
+    align-items: center;
+    min-width: 360px;
+    justify-content: space-around;
+    margin: 5% 0%;
+  }
+  .search-bar select{
+    height: min-content;
+    width: min-content;
+  }
 }
 
 /* @media screen and (min-width: 501px) and (max-width: 899px){
@@ -325,6 +377,7 @@ input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 2.5%;
 }
 
 .search-bar select {
