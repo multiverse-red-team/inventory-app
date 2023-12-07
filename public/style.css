@@ -124,8 +124,10 @@ a:hover {
 }
 
 .item-img-edit{
-  max-width: 600px;
-  max-height: 600px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 45px;
+  max-height: 450px;
   border-radius: 25px;
 }
 
