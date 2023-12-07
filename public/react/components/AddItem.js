@@ -49,7 +49,7 @@ function AddItem() {
       <div className="add">
         <h4 className="add-h4">Add an Item to Inventory</h4>
         <form className="add-form" onSubmit={handleSubmit}>
-          <label className="add-label">Name:</label>
+          <label className="add-label name-label">Name:</label>
           <input
             className="form-input"
             type="text"
@@ -103,7 +103,7 @@ function AddItem() {
           <br />
           <br />
           <div className="add-button-div">
-            <button className="add-button" type="submit">
+            <button className="add-button submit" type="submit">
               Submit
             </button>
           </div>

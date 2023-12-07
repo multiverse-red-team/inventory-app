@@ -9,10 +9,10 @@ function Item({ item }) {
   }
   let { id } = useParams()
 
-  
+
   const [isEdit, setIsEdit] = useState(false);
   const [updatedItem, setUpdatedItem] = useState(item)
-  
+
   console.log(updatedItem)
 
 
@@ -82,8 +82,9 @@ function Item({ item }) {
           <img src={item.image} alt="item" className="item-img-edit"/>
           <div id="edit-container">
             <form id="edit-form" onSubmit={updateItem}>
-              <label>Name:</label>
+              <label className="name-label">Name:</label>
               <input
+                className="form-input"
                 id="name-input"
                 name="name"
                 type="text"
@@ -93,7 +94,7 @@ function Item({ item }) {
               />
               <label>Price:</label>
               <input
-                className="form-inputs"
+                className="form-input"
                 name="price"
                 type="number"
                 placeholder="item price"
@@ -102,7 +103,7 @@ function Item({ item }) {
               />
               <label>Category:</label>
               <input
-                className="form-inputs"
+                className="form-input"
                 name="category"
                 type="text"
                 placeholder="item category"
@@ -111,14 +112,15 @@ function Item({ item }) {
               />
               <label>Description:</label>
               <textarea
+              className="form-input"
                 name="description"
-                rows={6} cols={40}
+                type="text"
                 value={updatedItem.description}
                 onChange={handleChange}
               />
               <div id="edit-buttons">
-                <button onClick={cancel}>Cancel</button>
-                <button type="submit">Save Changes</button>
+                <button className="submit" onClick={cancel}>Cancel</button>
+                <button className="submit" type="submit">Save Changes</button>
               </div>
             </form>
           </div >
