@@ -65,26 +65,27 @@ a:hover {
   padding-right: 5%;
 }
 
-
+#edit-container{
+  width: 100%;
+}
 #edit-form {
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
 }
 
 .form-inputs {
   width: fit-content;
 }
 
-#name-input {
+/* #name-input {
   width: 20%;
-}
+} */
 
-#edit-form textarea {
+/* #edit-form textarea {
   width: 35%;
   min-height: fit-content;
   resize: none;
-}
+} */
 
 #edit-form button {
   width: fit-content;
@@ -93,9 +94,12 @@ a:hover {
 #edit-buttons {
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 25%;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.submit{
+  margin: 1%;
 }
 
 .item{
@@ -186,17 +190,26 @@ a:hover {
   padding: 1%;
   margin-top: 1%;
 }
-.add {
+.add, .item-edit {
   margin: 1em;
   display: inline;
+
+}
+.item-edit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid green;
 }
 
-.add-form {
+.add-form, #edit-form {
   padding: 30 100 30 100;
   margin: 30px 200px 30px 200px;
+
 }
 
-.add-label {
+.add-label, .name-label {
   display: block;
   margin: 10px 0 10px 0;
   font-weight: bold;
@@ -211,7 +224,7 @@ a:hover {
   color: #142d4c;
 }
 
-.add-button {
+.add-button, .submit {
   height: 38px;
   width: 30%;
   padding: 0 10px;
@@ -229,7 +242,7 @@ a:hover {
 .form-input {
   width: 100%;
   height: 35px;
-  border: 1px solid #9fd3c7;
+  border: 2px solid #9fd3c7;
   border-radius: 7px;
   text-align: left;
   padding: 10px;
