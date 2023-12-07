@@ -45,7 +45,6 @@ function ItemList() {
   return (
       <div id="item-list">
          <h1>All Items In Inventory</h1>
-		 <form>
 		 <div className="search-bar">
 			<select value={searchBy} onChange={(e) => setSearchBy(e.target.value)} >
 				<option>All</option>
@@ -53,6 +52,7 @@ function ItemList() {
 					<option>{category}</option>
 				))}
 			</select>
+		 <form>
 			<label>Search: </label>
 			<input 
 				type="text"
@@ -61,9 +61,8 @@ function ItemList() {
         		value={search}
         		onChange={(e) => setSearch(e.target.value)}
 			/>
-			<button>Submit</button>
-		 </div>
 		 </form>
+		 </div>
       {filteredItems.map((item) => (
         <div key={item.id}>
           <Link to={`/items/${item.id}`} state={{ item }}>
