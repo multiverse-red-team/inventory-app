@@ -13,8 +13,6 @@ function Item({ item }) {
   const [isEdit, setIsEdit] = useState(false);
   const [updatedItem, setUpdatedItem] = useState(item)
 
-  console.log(updatedItem)
-
 
   async function deleteItem(itemId) {
     const response = await fetch(`${apiURL}/items/${itemId}`, { method: "DELETE" });
