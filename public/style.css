@@ -207,7 +207,6 @@ a:hover {
 .add-form, #edit-form {
   padding: 30 100 30 100;
   margin: 30px 200px 30px 200px;
-
 }
 
 .add-label, .name-label {
@@ -327,6 +326,26 @@ input:focus {
   }
   .description{
     margin-bottom: 10%;
+  }
+
+  .add-form, #edit-form {
+    padding: 15 50 15 50;
+    margin: 15px 50px 15px 50px;
+  }
+
+  .add-label, .name-label {
+    display: block;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+    text-align: left;
+    color: #142d4c;
+  }
+  .add-h4{
+    font-size:x-large;
+  }
+  .add-button{
+    padding: 0 5px;
+    width: fit-content;
   }
 }
 
