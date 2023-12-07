@@ -76,7 +76,6 @@ function AddItem() {
           <input
             name="category"
             className="form-input"
-            name="category"
             type="text"
             placeholder="Item category"
             required={true}
