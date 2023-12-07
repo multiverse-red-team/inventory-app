@@ -1,7 +1,5 @@
 * {
   margin: 0;
-  /* box-sizing: border-box; */
-  /* background-color: rgb(223, 223, 223); */
   font-family: "Roboto", sans-serif;
 }
 body {
@@ -76,16 +74,6 @@ a:hover {
 .form-inputs {
   width: fit-content;
 }
-
-/* #name-input {
-  width: 20%;
-} */
-
-/* #edit-form textarea {
-  width: 35%;
-  min-height: fit-content;
-  resize: none;
-} */
 
 #edit-form button {
   width: fit-content;
@@ -262,8 +250,6 @@ input:focus {
 @media screen and (max-width: 500px){
   * {
     margin: 0;
-    /* box-sizing: border-box; */
-    /* background-color: rgb(223, 223, 223); */
     font-family: "Roboto", sans-serif;
   }
   #nav{
@@ -368,15 +354,11 @@ input:focus {
   }
 }
 
-/* @media screen and (min-width: 501px) and (max-width: 899px){
-
-} */
-
 .search-bar {
-  width: 70vw;
+  width: 50vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 2.5%;
 }
 
