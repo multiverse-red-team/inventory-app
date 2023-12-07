@@ -355,10 +355,10 @@ input:focus {
 }
 
 .search-bar {
-  width: 70vw;
+  width: 50vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 2.5%;
 }
 
